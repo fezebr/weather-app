@@ -1,0 +1,13 @@
+.search-box .search-bar {
+     appearance: none;
+     border: none;
+     outline: none;
+     border-radius: 15px;
+     outline: none;
+     padding: 18px 30px;
+     margin: 30px auto;
+     font-size: 16px;
+     background-color: rgba(255, 255, 255, 0.6);
+     box-shadow: 2px 3px rgba(0, 0, 0, 0.1);
+
+}
