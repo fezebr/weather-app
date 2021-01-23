@@ -1,21 +1,33 @@
 import React from 'react';
 import './content.css'
-const Content = () => {
+const Content = ({ weather, fulldate }) => {
+     console.log(typeof weather.main)
+
+
      return (
-          <div className="content">
 
-               <div className="location-box">
-                    <div className="location">NY</div>
-                    <div className="date">2020</div>
-               </div>
 
-               <div className="weather-box">
-                    <div className="temp">
-                         7°c
-            </div>
-                    <div className="weather">sunny</div>
+          (typeof weather.main != "undefined") ? (
+
+
+               <div className="content">
+
+                    <div className="location-box">
+                         <div className="location">{weather.name}</div>
+                         <div className="date">{fulldate(new Date())}</div>
+                    </div>
+
+                    <div className="weather-box">
+                         <div className="temp">
+                              {Math.round(weather.main.temp)}°c
+                              </div>
+                         <div className="weather">{weather.weather[0].main}</div>
+                    </div>
                </div>
-          </div>
+          ) : ('')
+
+
+
      );
 }
 
