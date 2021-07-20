@@ -30,3 +30,8 @@ main {
   padding: 23px;
   padding: 23px 60px;
 }
+
+   .search-box {
+    display: flex;
+    justify-content: center;
+}
